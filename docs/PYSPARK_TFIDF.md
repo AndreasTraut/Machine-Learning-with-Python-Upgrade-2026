@@ -59,7 +59,9 @@ rescaledData = idfModel.transform(featurizedData)
 Nachdem die Texte als Vektoren vorliegen, nutzen wir den K-Means Algorithmus, um Strukturen zu finden.
  * Funktionsweise: Der Algorithmus platziert k Mittelpunkte (Zentroiden) im Raum.
  * Minimierung: Ziel ist es, die quadratische Abweichung jedes Punktes zu seinem Cluster-Zentrum zu minimieren:
-   
+
+ J = \sum_{j=1}^{k} \sum_{i=1}^{n} ||x_i^{(j)} - \mu_j||^2
+  
  * Ergebnis: Texte mit ähnlichem Wortschatz landen im selben Cluster.
 Code-Beispiel:
 from pyspark.ml.clustering import KMeans
@@ -73,5 +75,3 @@ predictions = model.transform(rescaledData)
 
 4. Visualisierung
 Um die Ergebnisse zu überprüfen, wird oft eine Dimensionsreduktion (z.B. PCA) verwendet, um die hochdimensionalen Vektoren auf 2D-Koordinaten herunterzubrechen und als Scatterplot darzustellen.
-
-Referenz: Dieser Workflow basiert auf den Notebooks und Datensätzen aus dem Repository AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.
