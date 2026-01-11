@@ -23,17 +23,27 @@ Die Berechnung erfolgt in drei mathematischen Schritten:
 
 **1. Term Frequency (TF):**
 Wie oft taucht ein Wort $t$ in einem Dokument $d$ auf?
-$$TF(t, d) = \frac{\text{Anzahl des Wortes } t \text{ in } d}{\text{Gesamtzahl aller Wörter in } d}$$
+
+$$
+TF(t, d) = \frac{\text{Anzahl des Wortes } t \text{ in } d}{\text{Gesamtzahl aller Wörter in } d}
+$$
 
 **2. Inverse Document Frequency (IDF):**
 Wie selten ist das Wort im gesamten Korpus?
-$$IDF(t, D) = \log \left( \frac{N}{|\{d \in D : t \in d\}|} \right)$$
+
+$$
+IDF(t, D) = \log \left( \frac{N}{|\{d \in D : t \in d\}|} \right)
+$$
+
 *Wobei:*
 * $N$: Gesamtzahl der Dokumente.
 * $|\{d \in D : t \in d\}|$: Anzahl der Dokumente, die das Wort $t$ enthalten.
 
 **3. Das TF-IDF Gewicht:**
-$$TF\text{-}IDF = TF(t,d) \times IDF(t, D)$$
+
+$$
+TF\text{-}IDF = TF(t,d) \times IDF(t, D)
+$$
 
 **Der PySpark Code im Notebook setzt dies wie folgt um:**
 
@@ -42,10 +52,12 @@ from pyspark.ml.feature import HashingTF, IDF, Tokenizer
 # 1. Text in Wörter zerlegen
 tokenizer = Tokenizer(inputCol="text", outputCol="words")
 wordsData = tokenizer.transform(df)
+
 # 2. Häufigkeit zählen (TF)
 HashingTF bildet Wörter auf Vektor-Indizes ab
 hashingTF = HashingTF(inputCol="words", outputCol="rawFeatures", numFeatures=20)
 featurizedData = hashingTF.transform(wordsData)
+
 # 3. Gewichtung berechnen (IDF)
 idf = IDF(inputCol="rawFeatures", outputCol="features")
 idfModel = idf.fit(featurizedData)
@@ -57,10 +69,13 @@ Nachdem die Texte als Vektoren vorliegen, nutzen wir den K-Means Algorithmus, um
  * Funktionsweise: Der Algorithmus platziert k Mittelpunkte (Zentroiden) im Raum.
  * Minimierung: Ziel ist es, die quadratische Abweichung jedes Punktes zu seinem Cluster-Zentrum zu minimieren:
 
+$$
  J = \sum_{j=1}^{k} \sum_{i=1}^{n} ||x_i^{(j)} - \mu_j||^2
+$$
   
  * Ergebnis: Texte mit ähnlichem Wortschatz landen im selben Cluster.
 Code-Beispiel:
+
 ```python
 from pyspark.ml.clustering import KMeans
 # Trainiere das Modell mit k=3 Clustern
