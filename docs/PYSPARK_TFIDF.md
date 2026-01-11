@@ -1,4 +1,3 @@
-```markdown
 # Big Data Analyse: Text Mining & Clustering mit PySpark
 
 Diese Dokumentation beschreibt den Workflow zur Analyse unstrukturierter Textdaten. Wir nutzen dazu die PySpark-Umgebung, um **TF-IDF** Berechnungen durchzuführen und Texte mittels **K-Means Clustering** zu gruppieren.
@@ -40,6 +39,7 @@ $$TF\text{-}IDF = TF(t,d) \times IDF(t, D)$$
 
 ```python
 from pyspark.ml.feature import HashingTF, IDF, Tokenizer
+```
 
 # 1. Text in Wörter zerlegen
 tokenizer = Tokenizer(inputCol="text", outputCol="words")
@@ -73,4 +73,5 @@ predictions = model.transform(rescaledData)
 
 4. Visualisierung
 Um die Ergebnisse zu überprüfen, wird oft eine Dimensionsreduktion (z.B. PCA) verwendet, um die hochdimensionalen Vektoren auf 2D-Koordinaten herunterzubrechen und als Scatterplot darzustellen.
+
 Referenz: Dieser Workflow basiert auf den Notebooks und Datensätzen aus dem Repository AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.
