@@ -39,33 +39,20 @@ $$TF\text{-}IDF = TF(t,d) \times IDF(t, D)$$
 
 ```python
 from pyspark.ml.feature import HashingTF, IDF, Tokenizer
-```
-
 # 1. Text in Wörter zerlegen
-
-```python
 tokenizer = Tokenizer(inputCol="text", outputCol="words")
 wordsData = tokenizer.transform(df)
-```
-
 # 2. Häufigkeit zählen (TF)
-
 HashingTF bildet Wörter auf Vektor-Indizes ab
-
-```python
 hashingTF = HashingTF(inputCol="words", outputCol="rawFeatures", numFeatures=20)
 featurizedData = hashingTF.transform(wordsData)
-```
-
 # 3. Gewichtung berechnen (IDF)
-
-```python
 idf = IDF(inputCol="rawFeatures", outputCol="features")
 idfModel = idf.fit(featurizedData)
 rescaledData = idfModel.transform(featurizedData)
-```
+```python
 
-3. Unsupervised Learning: K-Means Clustering
+## 3. Unsupervised Learning: K-Means Clustering
 Nachdem die Texte als Vektoren vorliegen, nutzen wir den K-Means Algorithmus, um Strukturen zu finden.
  * Funktionsweise: Der Algorithmus platziert k Mittelpunkte (Zentroiden) im Raum.
  * Minimierung: Ziel ist es, die quadratische Abweichung jedes Punktes zu seinem Cluster-Zentrum zu minimieren:
@@ -76,17 +63,12 @@ Nachdem die Texte als Vektoren vorliegen, nutzen wir den K-Means Algorithmus, um
 Code-Beispiel:
 ```python
 from pyspark.ml.clustering import KMeans
-```
-
 # Trainiere das Modell mit k=3 Clustern
-```python
-kmeans = KMeans().setK(3).setSeed(1)
+kmeans = kMeans().setK(3).setSeed(1)
 model = kmeans.fit(rescaledData)
-```
-
 # Zeige Vorhersagen
-```python
 predictions = model.transform(rescaledData)
 ```
-4. Visualisierung
+
+## 4. Visualisierung
 Um die Ergebnisse zu überprüfen, wird oft eine Dimensionsreduktion (z.B. PCA) verwendet, um die hochdimensionalen Vektoren auf 2D-Koordinaten herunterzubrechen und als Scatterplot darzustellen.
