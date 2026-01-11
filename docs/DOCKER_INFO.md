@@ -59,6 +59,7 @@ Du musst nichts installieren oder konfigurieren. Um die Umgebung zu starten, nut
 ```bash
 docker pull andreastraut/machine-learning-pyspark
 docker run -dp 8888:8888 andreastraut/machine-learning-pyspark:latest
+```
 
  * -d: Startet im Hintergrund (Detached).
  * -p 8888:8888: Leitet den Container-Port auf deinen PC um.
