@@ -113,6 +113,17 @@ pip install -r requirements.txt
 python scripts/Sklearn_MachineLearning_AirBnB.py
 ```
 
+## 🐳 Docker Environment & Big Data
+
+Für die **Big Data Beispiele (PySpark)** wird eine vorkonfigurierte Docker-Umgebung genutzt, um eine reibungslose Ausführung ohne komplexe lokale Installationen zu gewährleisten.
+
+- **🏗️ Infrastruktur:** Detaillierter Einblick in den Tech-Stack (Java/Spark/Python Layer) innerhalb des Containers:  
+  👉 **[Technische Architektur & Docker Details lesen](./docs/DOCKER_INFO.md)**
+
+- **🔬 Deep Dive:** Anwendung der Umgebung am Beispiel Text Mining (TF-IDF & K-Means):  
+  👉 **[PySpark Clustering Workflow ansehen](./docs/PYSPARK_TFIDF.md)**
+
+
 ## 📚 Fallstudien (Case Studies)
 
 1) **AirBnB — Preisvorhersage (Full ML Pipeline)**
