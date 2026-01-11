@@ -50,7 +50,7 @@ featurizedData = hashingTF.transform(wordsData)
 idf = IDF(inputCol="rawFeatures", outputCol="features")
 idfModel = idf.fit(featurizedData)
 rescaledData = idfModel.transform(featurizedData)
-```python
+```
 
 ## 3. Unsupervised Learning: K-Means Clustering
 Nachdem die Texte als Vektoren vorliegen, nutzen wir den K-Means Algorithmus, um Strukturen zu finden.
