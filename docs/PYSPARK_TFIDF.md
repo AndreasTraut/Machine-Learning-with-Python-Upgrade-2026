@@ -49,7 +49,8 @@ wordsData = tokenizer.transform(df)
 ```
 
 # 2. Häufigkeit zählen (TF)
-# HashingTF bildet Wörter auf Vektor-Indizes ab
+
+HashingTF bildet Wörter auf Vektor-Indizes ab
 
 ```python
 hashingTF = HashingTF(inputCol="words", outputCol="rawFeatures", numFeatures=20)
