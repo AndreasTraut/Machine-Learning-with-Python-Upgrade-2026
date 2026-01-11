@@ -130,7 +130,7 @@ Für die **Big Data Beispiele (PySpark)** wird eine vorkonfigurierte Docker-Umge
 
 - Pfad: `scripts/Sklearn_MachineLearning_AirBnB.py`
 - Fokus: ColumnTransformer, iterative Imputer, robustes Logging
-- Doku: `docs/AIRBNB_PRICE_PREDICTION.md`
+- Doku: `[docs/AIRBNB_PRICE_PREDICTION.md](docs/AIRBNB_PRICE_PREDICTION.md)``
 
 2) **Movies — Predicting NaNs**
 
