@@ -11,6 +11,10 @@ jobs:
   build-and-test:
     # Auf welchem Betriebssystem soll es laufen?
     runs-on: ubuntu-latest
+    
+    # Minimale Berechtigungen für den Workflow
+    permissions:
+      contents: read
 
     steps:
     # 1. Code vom Repository auschecken
