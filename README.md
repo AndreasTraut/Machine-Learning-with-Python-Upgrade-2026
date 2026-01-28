@@ -1,5 +1,7 @@
 # 🚀 Machine Learning with Python — Upgrade 2026
 
+![CI Status](https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026/actions/workflows/ci.yml/badge.svg)
+
 **Vom Legacy-Code (2020) zu modernen Best Practices**
 
 - **Autor:** Andreas Traut
