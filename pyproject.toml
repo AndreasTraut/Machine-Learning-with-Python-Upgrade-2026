@@ -4,7 +4,7 @@ version = "2026.1"
 description = "Machine Learning with Python - Evolution von Legacy-Code (2020) zu modernen Best Practices (2026)"
 readme = "README.md"
 authors = [
-    { name = "Andreas Traut", email = "andreas.traut@example.com" }
+    { name = "Andreas Traut" }
 ]
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -52,6 +52,3 @@ dev = [
 Homepage = "https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026"
 Repository = "https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026"
 Documentation = "https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026/blob/main/README.md"
-
-[dependency-groups]
-dev = []
