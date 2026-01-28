@@ -69,6 +69,8 @@ Machine-Learning-with-Python-Upgrade-2026/
 
 Dieses Projekt nutzt **[uv](https://docs.astral.sh/uv/)** für modernes, schnelles Dependency Management mit deterministischem Locking.
 
+> 📖 **Für bestehende User:** Siehe [MIGRATION_UV.md](MIGRATION_UV.md) für einen detaillierten Migrationsleitfaden
+
 ### Methode 1: Mit uv (Empfohlen) ✨
 
 1) **uv installieren** (falls noch nicht vorhanden)
