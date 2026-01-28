@@ -22,13 +22,26 @@ def test_project_structure():
     assert (project_root / "requirements.txt").exists(), "requirements.txt fehlt"
 
 
-def test_imports():
-    """Prüft, ob wichtige Bibliotheken importiert werden können."""
-    try:
-        import numpy
-        import pandas
-        import sklearn
-        import matplotlib
-        import seaborn
-    except ImportError as e:
-        assert False, f"Import fehlgeschlagen: {e}"
+def test_numpy_import():
+    """Prüft numpy Import."""
+    import numpy  # noqa: F401
+
+
+def test_pandas_import():
+    """Prüft pandas Import."""
+    import pandas  # noqa: F401
+
+
+def test_sklearn_import():
+    """Prüft scikit-learn Import."""
+    import sklearn  # noqa: F401
+
+
+def test_matplotlib_import():
+    """Prüft matplotlib Import."""
+    import matplotlib  # noqa: F401
+
+
+def test_seaborn_import():
+    """Prüft seaborn Import."""
+    import seaborn  # noqa: F401

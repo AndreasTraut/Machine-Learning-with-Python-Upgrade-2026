@@ -118,6 +118,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
 ```
 
+**Hinweis:** Vor dem Hinzufügen neuer Python-Versionen sollte die Kompatibilität aller Dependencies geprüft werden.
+
 ### Tests auf mehreren Betriebssystemen
 
 ```yaml

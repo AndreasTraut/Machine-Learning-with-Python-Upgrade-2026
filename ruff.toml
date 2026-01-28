@@ -27,7 +27,7 @@ select = [
 
 # Ignore specific rules that might be too strict for educational code
 ignore = [
-    "E501",  # line too long (handled by formatter)
+    "E501",  # line too long - relaxed for educational/notebook code
 ]
 
 [lint.per-file-ignores]

@@ -33,9 +33,13 @@ jobs:
     # 4. Linting mit Ruff (Prüft den Code-Stil)
     - name: Lint with ruff
       run: ruff check . --extend-exclude legacy
+      # Note: continue-on-error temporär aktiv während Initial-Setup
+      # TODO: Nach Code-Cleanup entfernen für strikte Quality-Gates
       continue-on-error: true
 
     # 5. Tests mit pytest ausführen
     - name: Run Tests
       run: pytest --verbose
+      # Note: continue-on-error temporär aktiv während Test-Ausbau
+      # TODO: Nach vollständiger Test-Abdeckung entfernen
       continue-on-error: true
