@@ -1,4 +1,17 @@
-# Machine Learning with Python - Upgrade 2025
+# Machine Learning with Python - Upgrade 2026
+# 
+# ⚠️ HINWEIS: Dieses Projekt nutzt jetzt uv für Dependency Management!
+# Diese requirements.txt wird nur für Legacy-Kompatibilität beibehalten.
+#
+# Empfohlene Installation:
+#   uv sync
+#
+# Legacy Installation (falls uv nicht verfügbar):
+#   pip install -r requirements.txt
+#
+# Siehe: MIGRATION_UV.md für Details zur Migration
+# Siehe: pyproject.toml für die definitive Dependency-Liste
+
 # Minimale empfohlene Versionen für reproduzierbare Umgebungen
 
 # Core scientific computing

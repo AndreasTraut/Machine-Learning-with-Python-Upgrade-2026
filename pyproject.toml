@@ -1,0 +1,54 @@
+[project]
+name = "machine-learning-with-python-upgrade-2026"
+version = "2026.1"
+description = "Machine Learning with Python - Evolution von Legacy-Code (2020) zu modernen Best Practices (2026)"
+readme = "README.md"
+authors = [
+    { name = "Andreas Traut" }
+]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["machine-learning", "data-science", "scikit-learn", "python", "education"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # Core scientific computing
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    
+    # Machine Learning
+    "scikit-learn>=1.2.0",
+    
+    # Data Visualization
+    "matplotlib>=3.5.0",
+    "seaborn>=0.12.0",
+    
+    # Jupyter
+    "jupyterlab>=4.0.0",
+    "ipykernel>=6.0.0",
+    
+    # Model Persistence
+    "joblib>=1.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026"
+Repository = "https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026"
+Documentation = "https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026/blob/main/README.md"
