@@ -13,7 +13,7 @@ Diese Datei definiert projektspezifische Regeln für die Erstellung und Pflege v
   - Maximal eine README.md pro Repository
 
 - **Changelog:** `CHANGELOG.md` im Repository-Root
-  - Dokumentiert alle Änderungen der Upgrade-2025-Version
+  - Dokumentiert alle Änderungen der Upgrade-2026-Version
   - Format: Markdown mit klarer Versionierung
 
 - **Code-Notebooks:** `notebooks/{thema}/`
@@ -33,7 +33,7 @@ Diese Datei definiert projektspezifische Regeln für die Erstellung und Pflege v
 ### Namenskonventionen
 
 - Markdown-Dateien: GROSSBUCHSTABEN für README.md und CHANGELOG.md
-- Python-Module: PascalCase oder snake_case (Konsistenz mit Upgrade-2025)
+- Python-Module: PascalCase oder snake_case (Konsistenz mit Upgrade-2026)
 - Ordnernamen: kleinbuchstaben mit Unterstrichen oder Bindestrichen
 - Jupyter Notebooks: Sprechende Namen mit Unterstrichen
 
@@ -62,7 +62,7 @@ Diese Datei definiert projektspezifische Regeln für die Erstellung und Pflege v
 
 **Pflicht-Komponenten:**
 
-1. **H1-Titel** mit "Changelog - Upgrade 2025"
+1. **H1-Titel** mit "Changelog - Upgrade 2026"
 2. **Versions-Header** (Version + Datum)
 3. **Übersicht** der Änderungen
 4. **Hauptziele** des Upgrades

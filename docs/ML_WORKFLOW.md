@@ -2,7 +2,7 @@
 
 > 🎯 **Ziel:** Schritt-für-Schritt Anleitung für strukturierte ML-Projekte  
 > 📖 **Implementierung:** Siehe Projekt-Beispiele in [docs/](.)  
-> 🧠 **Best Practices:** Basierend auf Upgrade 2025 Standards
+> 🧠 **Best Practices:** Basierend auf Upgrade 2026 Standards
 
 ---
 

@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 Machine Learning mit Scikit-Learn - AirBnB Preisvorhersage
-Upgrade 2025 - Modernisierte Version
+Upgrade 2026 - Modernisierte Version
 
 Autor: Andreas Traut
-Datum: Dezember 2025
-Version: 2025.1
+Datum: Dezember 2026
+Version: 2026.1
 
 Dieses Skript demonstriert einen vollständigen Machine-Learning-Workflow:
 1. Daten laden
@@ -481,7 +481,7 @@ def main() -> None:
     """Hauptfunktion - führt kompletten ML-Workflow aus."""
     logger.info("=" * 80)
     logger.info("Machine Learning mit Scikit-Learn - AirBnB Preisvorhersage")
-    logger.info("Upgrade 2025")
+    logger.info("Upgrade 2026")
     logger.info("=" * 80)
     
     try:

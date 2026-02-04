@@ -1,5 +1,9 @@
 # Big Data Analyse: Text Mining & Clustering mit PySpark
 
+> 💾 **Notebook:** `notebooks/pyspark/Text_Mining_TFIDF.ipynb`
+> 📊 **Dataset:** `datasets/TF-idf`
+> 🎯 **Lernziel:** Unsupervised Learning (Clustering) auf unstrukturierten Textdaten
+
 Diese Dokumentation beschreibt den Workflow zur Analyse unstrukturierter Textdaten. Wir nutzen dazu die PySpark-Umgebung, um **TF-IDF** Berechnungen durchzuführen und Texte mittels **K-Means Clustering** zu gruppieren.
 
 ## 1. Die Datenbasis
@@ -79,7 +83,7 @@ Code-Beispiel:
 ```python
 from pyspark.ml.clustering import KMeans
 # Trainiere das Modell mit k=3 Clustern
-kmeans = kMeans().setK(3).setSeed(1)
+kmeans = KMeans().setK(3).setSeed(1)
 model = kmeans.fit(rescaledData)
 # Zeige Vorhersagen
 predictions = model.transform(rescaledData)

@@ -10,7 +10,7 @@
 
 Dieses Projekt demonstriert einen **vollständigen Machine-Learning-Workflow** von Daten-Exploration bis zur Modell-Optimierung und -Persistenz. Ziel ist es, **AirBnB-Preise** basierend auf Features wie Lage, Bewertungen, Zimmeranzahl etc. vorherzusagen.
 
-Das Script zeigt **Best Practices 2025**:
+Das Script zeigt **Best Practices 2026**:
 - ✅ Modularer Code mit Funktionen
 - ✅ Type Hints für bessere Dokumentation
 - ✅ Logging statt print()
