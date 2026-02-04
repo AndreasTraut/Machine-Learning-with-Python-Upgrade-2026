@@ -1,0 +1,37 @@
+# Exclude legacy code and generated files
+extend-exclude = [
+    "legacy",
+    ".git",
+    "__pycache__",
+    ".venv",
+    "venv",
+    "*.egg-info",
+]
+
+# Line length to match black's default
+line-length = 88
+
+# Target Python 3.10+
+target-version = "py310"
+
+[lint]
+# Enable recommended rules
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+]
+
+# Ignore specific rules that might be too strict for educational code
+ignore = [
+    "E501",  # line too long - relaxed for educational/notebook code
+]
+
+[lint.per-file-ignores]
+# Allow unused imports in __init__.py files
+"__init__.py" = ["F401"]
+# Be more lenient in notebooks
+"*.ipynb" = ["E402", "F401", "F841"]
