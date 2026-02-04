@@ -1,5 +1,7 @@
 # 🚀 Machine Learning with Python — Upgrade 2026
 
+![CI Status](https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026/actions/workflows/ci.yml/badge.svg)
+
 **Vom Legacy-Code (2020) zu modernen Best Practices**
 
 - **Autor:** Andreas Traut
@@ -58,60 +60,124 @@ Machine-Learning-with-Python-Upgrade-2026/
 
 ## 🛠️ Technischer Stack
 
-- Python: >= 3.10
-- pandas: >= 2.0 (ggf. mit PyArrow-Backend)
-- scikit-learn: >= 1.2 (z. B. `set_config(transform_output="pandas")`)
-- Visualisierung: matplotlib, seaborn
-- Qualität: flake8-Konformität, Typ-Hints
+- **Python**: >= 3.10
+- **Dependency Management**: uv (modernes Locking & schnelle Installation)
+- **pandas**: >= 2.0 (ggf. mit PyArrow-Backend)
+- **scikit-learn**: >= 1.2 (z. B. `set_config(transform_output="pandas")`)
+- **Visualisierung**: matplotlib, seaborn
+- **Qualität**: flake8-Konformität, Typ-Hints
 
 ## 🚀 Installation & Quickstart
 
-Empfohlen: `venv` für eine isolierte Umgebung.
+Dieses Projekt nutzt **[uv](https://docs.astral.sh/uv/)** für modernes, schnelles Dependency Management mit deterministischem Locking.
 
-1) Repository klonen
+> 📖 **Für bestehende User:** Siehe [MIGRATION_UV.md](MIGRATION_UV.md) für einen detaillierten Migrationsleitfaden
+
+### Methode 1: Mit uv (Empfohlen) ✨
+
+1) **uv installieren** (falls noch nicht vorhanden)
+
+```bash
+# macOS / Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows (PowerShell)
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Oder via pip
+pip install uv
+```
+
+2) **Repository klonen**
 
 ```bash
 git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.git
 cd Machine-Learning-with-Python-Upgrade-2026
 ```
 
-2) Virtuelle Umgebung erstellen
+3) **Umgebung erstellen und Dependencies installieren** (ein Befehl!)
+
+```bash
+uv sync
+```
+
+Das erstellt automatisch eine virtuelle Umgebung (`.venv`) und installiert alle Dependencies aus `uv.lock`.
+
+4) **Umgebung aktivieren**
+
+- **Windows (PowerShell)**:
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+- **Windows (cmd)**:
+```cmd
+.venv\Scripts\activate.bat
+```
+
+- **macOS / Linux**:
+```bash
+source .venv/bin/activate
+```
+
+5) **Beispielskript ausführen (AirBnB)**
+
+```bash
+python scripts/Sklearn_MachineLearning_AirBnB.py
+```
+
+### Methode 2: Traditionell mit pip (Legacy)
+
+Falls Sie kein uv verwenden möchten, können Sie weiterhin die klassische `requirements.txt` nutzen:
+
+1) **Repository klonen**
+
+```bash
+git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.git
+cd Machine-Learning-with-Python-Upgrade-2026
+```
+
+2) **Virtuelle Umgebung erstellen**
 
 ```bash
 python -m venv venv
 ```
 
-3) Aktivieren
+3) **Aktivieren**
 
 - Windows (PowerShell):
-
 ```powershell
 venv\Scripts\Activate.ps1
 ```
 
 - Windows (cmd):
-
 ```cmd
 venv\Scripts\activate.bat
 ```
 
 - macOS / Linux:
-
 ```bash
 source venv/bin/activate
 ```
 
-4) Abhängigkeiten installieren
+4) **Abhängigkeiten installieren**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5) Beispielskript ausführen (AirBnB)
+5) **Beispielskript ausführen (AirBnB)**
 
 ```bash
 python scripts/Sklearn_MachineLearning_AirBnB.py
 ```
+
+### ⚡ Warum uv?
+
+- **Schneller**: 10-100x schneller als pip bei Installation & Dependency Resolution
+- **Deterministisch**: `uv.lock` garantiert identische Versionen überall
+- **Einfach**: Ein Befehl (`uv sync`) statt mehrerer Schritte
+- **Kompatibel**: Funktioniert nahtlos mit bestehenden `requirements.txt` und `pyproject.toml`
 
 ## 🐳 Docker Environment & Big Data
 
