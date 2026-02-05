@@ -29,12 +29,12 @@ Die Originaldateien sind archiviert; der neuen Code demonstriert praktikable Pat
 ## 📋 Inhaltsverzeichnis
 
 - [Ziele: Small Data vs. Big Data](#ziele-small-data-vs-big-data)
-- [Projekt-Übersicht & Ordnerstruktur](#projekt-%C3%BCbersicht--ordnerstruktur)
+- [Projekt-Übersicht & Ordnerstruktur](#projekt-übersicht-ordnerstruktur)
 - [Technischer Stack](#technischer-stack)
-- [Installation & Quickstart](#installation--quickstart)
+- [Installation & Quickstart](#installation-quickstart)
 - [Fallstudien (Case Studies)](#fallstudien-case-studies)
 - [ML-Workflow 2026](#ml-workflow-2026)
-- [Lizenz & Credits](#lizenz--credits)
+- [Lizenz & Credits](#lizenz-credits)
 
 ## 🔍 Ziele: Small Data vs. Big Data
 
