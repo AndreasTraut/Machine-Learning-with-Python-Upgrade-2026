@@ -226,7 +226,6 @@ Alle Projekte nutzen einen konsistenten Tech-Stack:
 - **[README.md](../README.md)** — Projekt-Übersicht und Quick Start
 - **[INSTALLATION.md](./INSTALLATION.md)** — Detaillierte Installationsanleitung
 - **[ML_WORKFLOW.md](./ML_WORKFLOW.md)** — Machine Learning Best Practices
-- **[CHANGELOG.md](../CHANGELOG.md)** — Versionshistorie (2020 → 2026)
 
 ---
 

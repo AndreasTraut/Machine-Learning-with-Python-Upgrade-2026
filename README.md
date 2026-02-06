@@ -55,10 +55,15 @@ Die Struktur trennt klar zwischen modernem Code und archiviertem Legacy-Material
 
 ```
 Machine-Learning-with-Python-Upgrade-2026/
-├── README-UPGRADE2026.md
+├── README.md
 ├── requirements.txt
-├── CHANGELOG.md
-├── docs/                    # Detaillierte Case-Study-Dokumentation
+├── pyproject.toml
+├── uv.lock
+├── docs/                    # Detaillierte Dokumentation
+│   ├── INSTALLATION.md      # Installationsanleitung
+│   ├── PROJECTS.md          # Projekt-Übersicht
+│   ├── ML_WORKFLOW.md       # ML Best Practices
+│   └── ...
 ├── datasets/                # Rohdaten (lokal)
 ├── notebooks/               # Modernisierte Jupyter-Notebooks
 ├── scripts/                 # Produktionsreife Skripte
