@@ -32,9 +32,16 @@ Die Originaldateien sind archiviert; der neuen Code demonstriert praktikable Pat
 - [Projekt-Übersicht & Ordnerstruktur](#projekt-übersicht-ordnerstruktur)
 - [Technischer Stack](#technischer-stack)
 - [Installation & Quickstart](#installation-quickstart)
-- [Fallstudien (Case Studies)](#fallstudien-case-studies)
+- [Projekte (Case Studies)](#projekte-case-studies)
 - [ML-Workflow 2026](#ml-workflow-2026)
 - [Lizenz & Credits](#lizenz-credits)
+
+## 📖 Detaillierte Dokumentation
+
+- 📦 **[Installation & Setup](docs/INSTALLATION.md)** — Vollständige Installationsanleitung (uv & pip)
+- 📚 **[Projekt-Übersicht](docs/PROJECTS.md)** — Detaillierte Beschreibungen aller Projekte
+- 🔄 **[ML-Workflow](docs/ML_WORKFLOW.md)** — Machine Learning Best Practices 2026
+- 🐳 **[Docker Setup](docs/DOCKER_INFO.md)** — Big Data Umgebung mit PySpark
 
 ## 🔍 Ziele: Small Data vs. Big Data
 
@@ -69,149 +76,80 @@ Machine-Learning-with-Python-Upgrade-2026/
 
 ## 🚀 Installation & Quickstart
 
-Dieses Projekt nutzt **[uv](https://docs.astral.sh/uv/)** für modernes, schnelles Dependency Management mit deterministischem Locking.
+Dieses Projekt nutzt **[uv](https://docs.astral.sh/uv/)** für modernes, schnelles Dependency Management.
 
-> 📖 **Für bestehende User:** Siehe [MIGRATION_UV.md](MIGRATION_UV.md) für einen detaillierten Migrationsleitfaden
+> 📦 **[Vollständige Installationsanleitung ansehen](docs/INSTALLATION.md)** — Detaillierte Schritte für uv und pip
 
-### Methode 1: Mit uv (Empfohlen) ✨
-
-1) **uv installieren** (falls noch nicht vorhanden)
+### Quick Start (mit uv — empfohlen)
 
 ```bash
-# macOS / Linux
+# 1. uv installieren (falls noch nicht vorhanden)
+# macOS/Linux:
 curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# Windows (PowerShell)
+# Windows (PowerShell):
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
-# Oder via pip
-pip install uv
-```
-
-2) **Repository klonen**
-
-```bash
+# 2. Repository klonen
 git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.git
 cd Machine-Learning-with-Python-Upgrade-2026
-```
 
-3) **Umgebung erstellen und Dependencies installieren** (ein Befehl!)
-
-```bash
+# 3. Umgebung erstellen und Dependencies installieren
 uv sync
-```
 
-Das erstellt automatisch eine virtuelle Umgebung (`.venv`) und installiert alle Dependencies aus `uv.lock`.
+# 4. Umgebung aktivieren
+# Windows: .venv\Scripts\Activate.ps1
+# macOS/Linux: source .venv/bin/activate
 
-4) **Umgebung aktivieren**
-
-- **Windows (PowerShell)**:
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-- **Windows (cmd)**:
-```cmd
-.venv\Scripts\activate.bat
-```
-
-- **macOS / Linux**:
-```bash
-source .venv/bin/activate
-```
-
-5) **Beispielskript ausführen (AirBnB)**
-
-```bash
+# 5. Beispielskript ausführen
 python scripts/Sklearn_MachineLearning_AirBnB.py
 ```
 
-### Methode 2: Traditionell mit pip (Legacy)
+### Alternative: pip-Installation
 
-Falls Sie kein uv verwenden möchten, können Sie weiterhin die klassische `requirements.txt` nutzen:
+Für die klassische pip-Installation siehe **[docs/INSTALLATION.md](docs/INSTALLATION.md)**
 
-1) **Repository klonen**
-
-```bash
-git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.git
-cd Machine-Learning-with-Python-Upgrade-2026
-```
-
-2) **Virtuelle Umgebung erstellen**
-
-```bash
-python -m venv venv
-```
-
-3) **Aktivieren**
-
-- Windows (PowerShell):
-```powershell
-venv\Scripts\Activate.ps1
-```
-
-- Windows (cmd):
-```cmd
-venv\Scripts\activate.bat
-```
-
-- macOS / Linux:
-```bash
-source venv/bin/activate
-```
-
-4) **Abhängigkeiten installieren**
-
-```bash
-pip install -r requirements.txt
-```
-
-5) **Beispielskript ausführen (AirBnB)**
-
-```bash
-python scripts/Sklearn_MachineLearning_AirBnB.py
-```
-
-### ⚡ Warum uv?
-
-- **Schneller**: 10-100x schneller als pip bei Installation & Dependency Resolution
-- **Deterministisch**: `uv.lock` garantiert identische Versionen überall
-- **Einfach**: Ein Befehl (`uv sync`) statt mehrerer Schritte
-- **Kompatibel**: Funktioniert nahtlos mit bestehenden `requirements.txt` und `pyproject.toml`
+> 📖 **Für bestehende User:** Siehe [MIGRATION_UV.md](MIGRATION_UV.md) für Migration von pip zu uv
 
 ## 🐳 Docker Environment & Big Data
 
-Für die **Big Data Beispiele (PySpark)** wird eine vorkonfigurierte Docker-Umgebung genutzt, um eine reibungslose Ausführung ohne komplexe lokale Installationen zu gewährleisten.
+Für **Big Data Beispiele (PySpark)** wird eine vorkonfigurierte Docker-Umgebung genutzt.
 
-- **🏗️ Infrastruktur:** Detaillierter Einblick in den Tech-Stack (Java/Spark/Python Layer) innerhalb des Containers:  
-  👉 **[Technische Architektur & Docker Details lesen](./docs/DOCKER_INFO.md)**
+> 🏗️ **[Docker Architektur & Setup](docs/DOCKER_INFO.md)** — Technischer Stack & Infrastruktur  
+> 🔬 **[PySpark Clustering Workflow](docs/PYSPARK_TFIDF.md)** — TF-IDF & K-Means Beispiel
 
-- **🔬 Deep Dive:** Anwendung der Umgebung am Beispiel Text Mining (TF-IDF & K-Means):  
-  👉 **[PySpark Clustering Workflow ansehen](./docs/PYSPARK_TFIDF.md)**
+## 📚 Projekte (Case Studies)
 
+> 📖 **[Vollständige Projekt-Übersicht ansehen](docs/PROJECTS.md)** — Detaillierte Beschreibungen, Lernziele & Technologien
 
-## 📚 Fallstudien (Case Studies)
+### Übersicht
 
-1) **AirBnB — Preisvorhersage (Full ML Pipeline)**
+**1. 🏠 AirBnB — Preisvorhersage**
+- **Script:** `scripts/Sklearn_MachineLearning_AirBnB.py`
+- **Fokus:** Vollständige ML-Pipeline mit ColumnTransformer, Iterative Imputation, Logging
+- **Details:** [docs/AIRBNB_PRICE_PREDICTION.md](docs/AIRBNB_PRICE_PREDICTION.md)
 
-- Pfad: `scripts/Sklearn_MachineLearning_AirBnB.py`
-- Fokus: ColumnTransformer, iterative Imputer, robustes Logging
-- Doku: `docs/AIRBNB_PRICE_PREDICTION.md`
+**2. 🎬 Movies — Predict NaNs**
+- **Notebook:** `notebooks/movies/Movies_Machine_Learning_Predict_NaNs.ipynb`
+- **Fokus:** ML-gestützte Imputation statt simpler Mittelwerte
+- **Details:** [docs/MOVIES_PREDICT_NANS.md](docs/MOVIES_PREDICT_NANS.md)
 
-2) **Movies — Predicting NaNs**
-
-- Pfad: `notebooks/movies/`
-- Fokus: ML‑gestützte Imputation (DecisionTrees), Stratified vs. Random Sampling
-- Doku: `docs/MOVIES_PREDICT_NANS.md`
+**3. 🎬 Movies — Stratified Sampling**
+- **Notebook:** `notebooks/movies/Movies_Machine_Learning_StratifiedSample.ipynb`
+- **Fokus:** Vergleich von Stratified vs. Random Sampling
+- **Details:** [docs/MOVIES_STRATIFIED_SAMPLE.md](docs/MOVIES_STRATIFIED_SAMPLE.md)
 
 ## 🔄 ML-Workflow 2026
 
-- Ingestion: typ‑sicheres Laden mit Validierung
-- EDA: Verteilungen, Korrelationen, Visual Checks
-- Preprocessing: Categorical → OneHot (handle_unknown='ignore'), Numerical → Scaler + Imputer
-- Training: GridSearch / RandomizedSearch
-- Evaluation: RMSE, R², Residual-Analyse
-- Persistenz: Modell speichern mit `joblib`
+> 📖 **[Vollständiger Workflow & Best Practices](docs/ML_WORKFLOW.md)**
+
+Alle Projekte folgen einem konsistenten, modernen Workflow:
+
+- **Ingestion:** Typ-sicheres Laden mit Validierung
+- **EDA:** Verteilungen, Korrelationen, Visual Checks
+- **Preprocessing:** Pipelines mit ColumnTransformer (Categorical → OneHot, Numerical → Scaler + Imputer)
+- **Training:** GridSearch / RandomizedSearch mit Cross-Validation
+- **Evaluation:** RMSE, R², Residual-Analyse
+- **Persistenz:** Modell speichern mit `joblib`, reproduzierbare Seeds
 
 ## 📝 Lizenz & Credits
 
