@@ -35,7 +35,7 @@ dependencies = [
     "seaborn>=0.12.0",
     
     # Jupyter
-    "jupyterlab>=4.0.0",
+    "jupyterlab>=4.5.7",
     "ipykernel>=6.0.0",
     
     # Model Persistence
