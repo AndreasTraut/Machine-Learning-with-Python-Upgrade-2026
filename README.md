@@ -10,7 +10,7 @@
 
 ## 📖 Über dieses Projekt
 
-Dieses Repository fasst die Evolution eines Machine-Learning-Workflows von 2020 bis 2026 zusammen. Ziel ist es, alten Code nicht nur lauffähig zu halten, sondern ihn gemäß moderner Software-Engineering-Prinzipien (Modularität, Typisierung, Pipelines, Logging) zu refactoren und zu dokumentieren.
+Dieses Repository fasst die Evolution eines Machine-Learning-Workflows von 2020 (siehe [alter Stand von 2020](https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026/blob/main/legacy%2FREADME.md)) bis 2026 zusammen. Ziel ist es, alten Code nicht nur lauffähig zu halten, sondern ihn gemäß moderner Software-Engineering-Prinzipien (Modularität, Typisierung, Pipelines, Logging) zu refactoren und zu dokumentieren.
 
 Die Originaldateien sind archiviert; der neuen Code demonstriert praktikable Patterns für Produktion und Forschung.
 
