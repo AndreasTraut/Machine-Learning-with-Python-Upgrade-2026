@@ -147,14 +147,17 @@ Dieses Projekt vergleicht zufällige Stichproben mit stratifiziertem Sampling f�
 
 > 📖 **[Vollständiger Workflow & Best Practices](docs/ML_WORKFLOW.md)**
 
-Alle Projekte folgen einem konsistenten, modernen Workflow:
+Alle Projekte folgen einem konsistenten, modernen Workflow in 9 Schritten (ausführlich erklärt in [docs/ML_WORKFLOW.md](docs/ML_WORKFLOW.md)):
 
-- **Ingestion:** Typ-sicheres Laden mit Validierung
-- **EDA:** Verteilungen, Korrelationen, Visual Checks
-- **Preprocessing:** Pipelines mit ColumnTransformer (Categorical → OneHot, Numerical → Scaler + Imputer)
-- **Training:** GridSearch / RandomizedSearch mit Cross-Validation
-- **Evaluation:** RMSE, R², Residual-Analyse
-- **Persistenz:** Modell speichern mit `joblib`, reproduzierbare Seeds
+1. **Problem definieren** — Ziel, Metriken und Randbedingungen klar festlegen.
+2. **Daten sammeln & laden** — Datenquellen zusammenführen und robust einlesen.
+3. **Explorative Datenanalyse (EDA)** — Verteilungen, Ausreißer und Muster verstehen.
+4. **Datenvorverarbeitung** — fehlende Werte, Skalierung und Kodierung sauber vorbereiten.
+5. **Feature Engineering** — aussagekräftige Merkmale aus Rohdaten ableiten.
+6. **Train-Test-Split** — Daten korrekt in Trainings- und Testanteile trennen.
+7. **Modelltraining & -evaluation** — Modelle trainieren und mit passenden Kennzahlen bewerten.
+8. **Hyperparameter-Optimierung** — Modellparameter systematisch verbessern (z. B. via CV-Suche).
+9. **Modell-Deployment & Monitoring** — Modell bereitstellen und laufend überwachen.
 
 ## 📝 Lizenz & Credits
 
