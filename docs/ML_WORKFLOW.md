@@ -30,12 +30,25 @@ Ein typischer **Machine Learning Workflow** besteht aus 9 Hauptphasen:
 9. Modell-Deployment & Monitoring
 ```
 
+Kurz erklärt:
+1. Das Ziel, die Problemart und die Erfolgsmetrik werden präzise festgelegt.
+2. Relevante Rohdaten werden aus geeigneten Quellen geladen und auf Vollständigkeit geprüft.
+3. Die Daten werden statistisch und visuell untersucht, um Muster und Risiken früh zu erkennen.
+4. Fehlende Werte, Ausreißer und Duplikate werden bereinigt, damit die Datenqualität stimmt.
+5. Aus bestehenden Merkmalen werden modellrelevante Features erzeugt und skaliert.
+6. Die Daten werden reproduzierbar in Trainings- und Testdaten aufgeteilt.
+7. Mehrere Modelle werden trainiert und mit klaren Metriken verglichen.
+8. Modellparameter werden systematisch optimiert, um die Leistung zu verbessern.
+9. Das finale Modell wird bereitgestellt und im Betrieb kontinuierlich überwacht.
+
 Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `1. Problem definieren`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/user_guide.html.
 
 
 ---
 
 ## 1️⃣ Problem definieren
+
+Die Besonderheit dieses Kapitels ist die klare Übersetzung einer Geschäftsidee in ein präzises ML-Ziel. Hier werden Problemtyp und Erfolgskriterien so festgelegt, dass alle weiteren Schritte messbar ausgerichtet sind. Eine saubere Problemdefinition verhindert späteren Mehraufwand und Fehlentwicklungen.
 
 ### Fragestellungen klären
 
@@ -64,6 +77,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 ---
 
 ## 2️⃣ Daten sammeln & laden
+
+Die Besonderheit dieses Kapitels ist der Fokus auf belastbare Datenquellen und robustes Einlesen. Bereits beim Laden werden Qualität, Vollständigkeit und Fehlerfälle systematisch abgesichert. So entsteht eine stabile Basis für alle nachfolgenden Analysen.
 
 ### Datenquellen identifizieren
 
@@ -125,6 +140,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 ---
 
 ## 3️⃣ Explorative Datenanalyse (EDA)
+
+Die Besonderheit dieses Kapitels ist die Kombination aus Statistik und Visualisierung zur schnellen Dateneinschätzung. Auffälligkeiten wie fehlende Werte, Schieflagen oder Korrelationen werden früh sichtbar gemacht. Dadurch können fundierte Entscheidungen für Vorverarbeitung und Modellwahl getroffen werden.
 
 ### Datenstruktur verstehen
 
@@ -199,6 +216,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 
 ## 4️⃣ Datenvorverarbeitung
 
+Die Besonderheit dieses Kapitels ist die systematische Bereinigung vor dem eigentlichen Lernen. Fehlende Werte, Ausreißer und Duplikate werden mit klaren Regeln behandelt, um Verzerrungen zu reduzieren. Damit verbessert sich die Verlässlichkeit der Modellresultate deutlich.
+
 ### Fehlende Werte behandeln
 
 **Strategien:**
@@ -265,6 +284,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 ---
 
 ## 5️⃣ Feature Engineering
+
+Die Besonderheit dieses Kapitels ist die gezielte Umwandlung roher Daten in lernstarke Eingaben. Durch Skalierung, Encoding und neue abgeleitete Merkmale wird mehr Signal für das Modell nutzbar. Gute Features sind oft entscheidender als die Wahl eines komplexen Algorithmus.
 
 ### Skalierung numerischer Features
 
@@ -341,6 +362,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 
 ## 6️⃣ Train-Test-Split
 
+Die Besonderheit dieses Kapitels ist die saubere Trennung von Lernen und Bewerten zur Vermeidung von Datenleckagen. Reproduzierbare Splits und konsistente Pipelines sichern faire Vergleiche zwischen Modellen. So spiegeln Testmetriken realistischer die spätere Praxis wider.
+
 ### Einfacher Random Split
 
 ```python
@@ -412,6 +435,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 ---
 
 ## 7️⃣ Modelltraining & -evaluation
+
+Die Besonderheit dieses Kapitels ist der strukturierte Vergleich mehrerer Modellfamilien unter einheitlichen Metriken. Neben reiner Trainingsleistung wird gezielt auf Generalisierung und Stabilität geachtet. Dadurch wird nicht das komplexeste, sondern das verlässlichste Modell ausgewählt.
 
 ### Modelle für Regression
 
@@ -516,6 +541,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 
 ## 8️⃣ Hyperparameter-Optimierung
 
+Die Besonderheit dieses Kapitels ist die systematische Feineinstellung statt intuitiver Parameterwahl. Mit Grid- und Randomized-Search werden reproduzierbar bessere Konfigurationen gefunden. Das erhöht die Modellleistung, ohne die Bewertungslogik zu verändern.
+
 ### Grid Search
 
 ```python
@@ -579,6 +606,8 @@ Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows
 ---
 
 ## 9️⃣ Modell-Deployment & Monitoring
+
+Die Besonderheit dieses Kapitels ist die Überführung des Modells in einen stabilen Betriebsprozess. Modell und Preprocessing werden gemeinsam versioniert gespeichert, damit Vorhersagen konsistent bleiben. Monitoring macht Leistungsabfall sichtbar und ermöglicht rechtzeitiges Nachsteuern.
 
 ### Modell speichern
 
