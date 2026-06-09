@@ -128,20 +128,20 @@ Für **Big Data Beispiele (PySpark)** wird eine vorkonfigurierte Docker-Umgebung
 
 ### Übersicht
 
-**1. 🏠 AirBnB — Preisvorhersage**
-- **Script:** `scripts/Sklearn_MachineLearning_AirBnB.py`
-- **Fokus:** Vollständige ML-Pipeline mit ColumnTransformer, Iterative Imputation, Logging
-- **Details:** [docs/AIRBNB_PRICE_PREDICTION.md](docs/AIRBNB_PRICE_PREDICTION.md)
+**1. 🏠 AirBnB — Preisvorhersage**  
+Dieses Projekt zeigt eine vollständige, praxisnahe Machine-Learning-Pipeline zur Vorhersage von Unterkunftspreisen. Kategoriale und numerische Merkmale werden mit einem `ColumnTransformer` konsistent aufbereitet, damit alle Verarbeitungsschritte reproduzierbar bleiben. Fehlende Werte werden modellgestützt imputiert, statt nur mit einfachen Standardwerten ersetzt zu werden. Das Skript eignet sich als Vorlage für produktionsnahe Regressionsprojekte mit klarer Struktur und Logging.  
+**Script:** `scripts/Sklearn_MachineLearning_AirBnB.py`  
+**Details:** [docs/AIRBNB_PRICE_PREDICTION.md](docs/AIRBNB_PRICE_PREDICTION.md)
 
-**2. 🎬 Movies — Predict NaNs**
-- **Notebook:** `notebooks/movies/Movies_Machine_Learning_Predict_NaNs.ipynb`
-- **Fokus:** ML-gestützte Imputation statt simpler Mittelwerte
-- **Details:** [docs/MOVIES_PREDICT_NANS.md](docs/MOVIES_PREDICT_NANS.md)
+**2. 🎬 Movies — Predict NaNs**  
+Dieses Notebook konzentriert sich auf den gezielten Umgang mit fehlenden Werten in Filmdaten. Statt pauschaler Mittelwert- oder Median-Ersetzung wird ein ML-Ansatz genutzt, um fehlende Werte datenabhängig zu schätzen. Dadurch bleiben Zusammenhänge zwischen Merkmalen besser erhalten und die Datenqualität steigt. Das Projekt macht nachvollziehbar, wann intelligente Imputation einen echten Mehrwert gegenüber einfachen Heuristiken bietet.  
+**Notebook:** `notebooks/movies/Movies_Machine_Learning_Predict_NaNs.ipynb`  
+**Details:** [docs/MOVIES_PREDICT_NANS.md](docs/MOVIES_PREDICT_NANS.md)
 
-**3. 🎬 Movies — Stratified Sampling**
-- **Notebook:** `notebooks/movies/Movies_Machine_Learning_StratifiedSample.ipynb`
-- **Fokus:** Vergleich von Stratified vs. Random Sampling
-- **Details:** [docs/MOVIES_STRATIFIED_SAMPLE.md](docs/MOVIES_STRATIFIED_SAMPLE.md)
+**3. 🎬 Movies — Stratified Sampling**  
+Dieses Projekt vergleicht zufällige Stichproben mit stratifiziertem Sampling für Trainings- und Testdaten. Ziel ist es, wichtige Verteilungen im Datensatz auch nach dem Split stabil zu halten. Dadurch werden Modelle fairer bewertet, weil Testdaten die Gesamtpopulation besser repräsentieren. Das Notebook ist besonders hilfreich, um den Einfluss der Datenselektion auf Modellgüte und Generalisierung praktisch zu verstehen.  
+**Notebook:** `notebooks/movies/Movies_Machine_Learning_StratifiedSample.ipynb`  
+**Details:** [docs/MOVIES_STRATIFIED_SAMPLE.md](docs/MOVIES_STRATIFIED_SAMPLE.md)
 
 ## 🔄 ML-Workflow 2026
 
