@@ -32,15 +32,24 @@ Falls Sie uv noch nicht installiert haben:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `curl -LsSf https://astral.sh/uv/install.sh | sh`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 **Windows (PowerShell):**
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
+Der PowerShell-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 **Alternative: Installation via pip:**
 ```bash
 pip install uv
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `pip install uv`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 ### Schritt 2: Repository klonen
 
@@ -49,6 +58,9 @@ git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2
 cd Machine-Learning-with-Python-Upgrade-2026
 ```
 
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.git`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 ### Schritt 3: Umgebung erstellen und Dependencies installieren
 
 Mit einem einzigen Befehl:
@@ -56,6 +68,9 @@ Mit einem einzigen Befehl:
 ```bash
 uv sync
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `uv sync`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 Dieser Befehl:
 - Erstellt automatisch eine virtuelle Umgebung im `.venv`-Ordner
@@ -69,15 +84,24 @@ Dieser Befehl:
 .venv\Scripts\Activate.ps1
 ```
 
+Der PowerShell-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `.venv\Scripts\Activate.ps1`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 **Windows (cmd):**
 ```cmd
 .venv\Scripts\activate.bat
 ```
 
+Der CMD-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `.venv\Scripts\activate.bat`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 **macOS / Linux:**
 ```bash
 source .venv/bin/activate
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `source .venv/bin/activate`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 ### Schritt 5: Installation verifizieren
 
@@ -86,6 +110,9 @@ Führen Sie ein Beispielskript aus:
 ```bash
 python scripts/Sklearn_MachineLearning_AirBnB.py
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `python scripts/Sklearn_MachineLearning_AirBnB.py`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### ⚡ Vorteile von uv
 
@@ -110,11 +137,17 @@ git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2
 cd Machine-Learning-with-Python-Upgrade-2026
 ```
 
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `git clone https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026.git`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 ### Schritt 2: Virtuelle Umgebung erstellen
 
 ```bash
 python -m venv venv
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `python -m venv venv`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 ### Schritt 3: Virtuelle Umgebung aktivieren
 
@@ -123,21 +156,33 @@ python -m venv venv
 venv\Scripts\Activate.ps1
 ```
 
+Der PowerShell-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `venv\Scripts\Activate.ps1`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 **Windows (cmd):**
 ```cmd
 venv\Scripts\activate.bat
 ```
+
+Der CMD-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `venv\Scripts\activate.bat`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 **macOS / Linux:**
 ```bash
 source venv/bin/activate
 ```
 
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `source venv/bin/activate`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
+
 ### Schritt 4: Dependencies installieren
 
 ```bash
 pip install -r requirements.txt
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `pip install -r requirements.txt`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 ### Schritt 5: Installation verifizieren
 
@@ -146,6 +191,9 @@ Führen Sie ein Beispielskript aus:
 ```bash
 python scripts/Sklearn_MachineLearning_AirBnB.py
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `python scripts/Sklearn_MachineLearning_AirBnB.py`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ---
 

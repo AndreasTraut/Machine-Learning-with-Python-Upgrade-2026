@@ -48,6 +48,9 @@ movies_df['revenue_cat'] = pd.cut(
 print(movies_df['revenue_cat'].value_counts(normalize=True))
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `import pandas as pd`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://pandas.pydata.org/docs/.
+
+
 **Ausgabe:**
 ```
 0-50M       0.68
@@ -55,6 +58,9 @@ print(movies_df['revenue_cat'].value_counts(normalize=True))
 100-200M    0.08
 200M+       0.03
 ```
+
+Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `0-50M 0.68`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/user_guide.html.
+
 
 ### 2. Visualisierung der Verteilung
 
@@ -69,6 +75,9 @@ plt.ylabel('Anzahl Filme')
 plt.tight_layout()
 plt.show()
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `import matplotlib.pyplot as plt`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://matplotlib.org/stable/users/index.html.
+
 
 ### 3. Vergleich: Random vs. Stratified Split
 
@@ -87,6 +96,9 @@ print("Random Split - Test Set Verteilung:")
 print(test_set['revenue_cat'].value_counts(normalize=True))
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import train_test_split`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 **Stratified Split:**
 ```python
 from sklearn.model_selection import StratifiedShuffleSplit
@@ -101,6 +113,9 @@ for train_index, test_index in split.split(movies_df, movies_df['revenue_cat']):
 print("\nStratified Split - Test Set Verteilung:")
 print(strat_test_set['revenue_cat'].value_counts(normalize=True))
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import StratifiedShuffleSplit`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### 4. Vergleich der Verteilungen
 
@@ -117,6 +132,9 @@ comparison = pd.DataFrame({
 print(comparison)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `import pandas as pd`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://pandas.pydata.org/docs/.
+
+
 **Ergebnis:**
 ```
               Gesamt  Random Split  Stratified Split
@@ -125,6 +143,9 @@ print(comparison)
 100-200M       0.08         0.07             0.08
 200M+          0.03         0.03             0.03
 ```
+
+Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `Gesamt Random Split Stratified Split`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/user_guide.html.
+
 
 **Interpretation:**
 - ✅ **Stratified Split:** Perfekte Übereinstimmung mit Gesamt-Verteilung
@@ -149,6 +170,9 @@ stratified_bias = sampling_bias('Stratified', strat_test_set)
 print(pd.concat([random_bias, stratified_bias], axis=1))
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `def sampling_bias(strategy_name, test_set):`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 **Ausgabe:**
 ```
               Random % Fehler  Stratified % Fehler
@@ -157,6 +181,9 @@ print(pd.concat([random_bias, stratified_bias], axis=1))
 100-200M              -12.5%                +0.1%
 200M+                  0.0%                  0.0%
 ```
+
+Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `Random % Fehler Stratified % Fehler`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/user_guide.html.
+
 
 ## 📊 Praktisches Beispiel: Pipeline mit Stratified Data
 
@@ -213,6 +240,9 @@ rmse = np.sqrt(mean_squared_error(y_test, predictions))
 print(f"RMSE mit Stratified Sampling: ${rmse:.2f}M")
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.pipeline import Pipeline`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ## 💡 Best Practices
 
 ### ✅ Wann Stratified Sampling verwenden?
@@ -244,6 +274,9 @@ movies_df['revenue_cat'] = pd.cut(
 )
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# ❌ SCHLECHT: Zu viele Kategorien → zu wenige Samples pro Kategorie`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 **Fehler 2: Vergessen, Kategorie-Spalte zu entfernen**
 ```python
 # ❌ SCHLECHT: revenue_cat wird als Feature verwendet
@@ -253,6 +286,9 @@ X_train = strat_train_set.drop('Revenue', axis=1)
 X_train = strat_train_set.drop(['Revenue', 'revenue_cat'], axis=1)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# ❌ SCHLECHT: revenue_cat wird als Feature verwendet`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 **Fehler 3: random_state nicht setzen**
 ```python
 # ❌ SCHLECHT: Nicht reproduzierbar
@@ -261,6 +297,9 @@ split = StratifiedShuffleSplit(n_splits=1, test_size=0.2)
 # ✅ GUT: Reproduzierbare Ergebnisse
 split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# ❌ SCHLECHT: Nicht reproduzierbar`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
 
 ## 🔄 Cross-Validation mit Stratification
 
@@ -279,6 +318,9 @@ scores = cross_val_score(
 print(f"Cross-Validation Scores: {scores}")
 print(f"Mean Accuracy: {scores.mean():.3f} (+/- {scores.std():.3f})")
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import StratifiedKFold, cross_val_score`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ## 📈 Vergleich verschiedener Sampling-Strategien
 

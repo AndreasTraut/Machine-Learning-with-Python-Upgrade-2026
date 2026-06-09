@@ -29,6 +29,9 @@ Das Repository zeigt den aktuellen Build-Status in der README.md:
 ![CI Status](https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026/actions/workflows/ci.yml/badge.svg)
 ```
 
+Der Markdown-Ausschnitt zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `![CI Status](https://github.com/AndreasTraut/Machine-Learning-with-Python-Upgrade-2026/...`, mit der der zentrale Schritt direkt ausgeführt wird. Die Konfiguration definiert klar den Ablauf der Automatisierung, sodass Prüfungen und Ausführungen zuverlässig in gleicher Reihenfolge laufen. Weitere Details stehen in der offiziellen Dokumentation: https://docs.github.com/actions/using-workflows.
+
+
 - ✅ **Grün** = Alle Checks erfolgreich
 - ❌ **Rot** = Fehler gefunden
 - 🟡 **Gelb** = Workflow läuft gerade
@@ -45,6 +48,9 @@ tests/
 └── (weitere Tests)     # Zukünftige Tests hier hinzufügen
 ```
 
+Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `tests/`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/user_guide.html.
+
+
 ### Tests lokal ausführen
 
 ```bash
@@ -54,6 +60,9 @@ pytest --verbose
 # Nur spezifische Tests
 pytest tests/test_basic.py -v
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Alle Tests ausführen`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 ### Neue Tests hinzufügen
 
@@ -67,6 +76,9 @@ def test_example():
     """Beschreibung was getestet wird."""
     assert 1 + 1 == 2
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `def test_example():`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
 
 ## 🎨 Code-Linting (Ruff)
 
@@ -89,6 +101,9 @@ ruff check . --fix --extend-exclude legacy
 # Nur spezifische Dateien
 ruff check scripts/
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Alle Dateien prüfen`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 
 ## 🔍 Workflow-Logs ansehen
 
@@ -118,6 +133,9 @@ jobs:
         python-version: ${{ matrix.python-version }}
 ```
 
+Die YAML-Konfiguration zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `jobs:`, mit der der zentrale Schritt direkt ausgeführt wird. Die Konfiguration definiert klar den Ablauf der Automatisierung, sodass Prüfungen und Ausführungen zuverlässig in gleicher Reihenfolge laufen. Weitere Details stehen in der offiziellen Dokumentation: https://yaml.org/spec/1.2/spec.html.
+
+
 **Hinweis:** Vor dem Hinzufügen neuer Python-Versionen sollte die Kompatibilität aller Dependencies geprüft werden.
 
 ### Tests auf mehreren Betriebssystemen
@@ -131,6 +149,9 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: ['3.11']
 ```
+
+Die YAML-Konfiguration zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `jobs:`, mit der der zentrale Schritt direkt ausgeführt wird. Die Konfiguration definiert klar den Ablauf der Automatisierung, sodass Prüfungen und Ausführungen zuverlässig in gleicher Reihenfolge laufen. Weitere Details stehen in der offiziellen Dokumentation: https://yaml.org/spec/1.2/spec.html.
+
 
 ## 📚 Weitere Ressourcen
 
@@ -148,6 +169,9 @@ jobs:
    ruff check . --extend-exclude legacy
    pytest --verbose
    ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `ruff check . --extend-exclude legacy`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://www.gnu.org/software/bash/manual/.
+
 3. Behebe Fehler und pushe erneut
 
 ### Ruff findet zu viele Fehler

@@ -68,6 +68,9 @@ idfModel = idf.fit(featurizedData)
 rescaledData = idfModel.transform(featurizedData)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from pyspark.ml.feature import HashingTF, IDF, Tokenizer`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://spark.apache.org/docs/latest/api/python/.
+
+
 ## 3. Unsupervised Learning: K-Means Clustering
 Nachdem die Texte als Vektoren vorliegen, nutzen wir den K-Means Algorithmus, um Strukturen zu finden.
  * Funktionsweise: Der Algorithmus platziert k Mittelpunkte (Zentroiden) im Raum.
@@ -88,6 +91,9 @@ model = kmeans.fit(rescaledData)
 # Zeige Vorhersagen
 predictions = model.transform(rescaledData)
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from pyspark.ml.clustering import KMeans`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://spark.apache.org/docs/latest/api/python/.
+
 
 ## 4. Visualisierung
 Um die Ergebnisse zu überprüfen, wird oft eine Dimensionsreduktion (z.B. PCA) verwendet, um die hochdimensionalen Vektoren auf 2D-Koordinaten herunterzubrechen und als Scatterplot darzustellen.
