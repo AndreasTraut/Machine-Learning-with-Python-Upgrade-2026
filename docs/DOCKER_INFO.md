@@ -35,6 +35,9 @@ Das Image ist schichtweise aufgebaut (wie ein Stapel Pfannkuchen). Jede Schicht 
     ENV PATH=$PATH:$SPARK_HOME/bin
     ```
 
+Die Dockerfile-Anweisung zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `ENV SPARK_HOME=/usr/local/spark`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.docker.com/.
+
+
 **4. Python & PySpark Layer**
 * **Python:** Installation von Python 3.
 * **Libraries:** Über `pip` werden die wichtigsten Data-Science-Pakete vorinstalliert:
@@ -50,6 +53,9 @@ Das Image ist schichtweise aufgebaut (wie ein Stapel Pfannkuchen). Jede Schicht 
     ```dockerfile
     CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root"]
     ```
+
+Die Dockerfile-Anweisung zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root"]`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.docker.com/.
+
     *Hinweis:* `0.0.0.0` ist notwendig, damit der Container Verbindungen von "außen" (deinem Host-PC) akzeptiert.
 
 ## 3. Nutzung
@@ -60,6 +66,9 @@ Du musst nichts installieren oder konfigurieren. Um die Umgebung zu starten, nut
 docker pull andreastraut/machine-learning-pyspark
 docker run -dp 8888:8888 andreastraut/machine-learning-pyspark:latest
 ```
+
+Der Bash-Befehl zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `docker pull andreastraut/machine-learning-pyspark`, mit der der zentrale Schritt direkt ausgeführt wird. So wird die Umgebung reproduzierbar aufgebaut, damit alle Beteiligten mit denselben Abhängigkeiten arbeiten können. Weitere Details stehen in der offiziellen Dokumentation: https://docs.docker.com/.
+
 
  * -d: Startet im Hintergrund (Detached).
  * -p 8888:8888: Leitet den Container-Port auf deinen PC um.

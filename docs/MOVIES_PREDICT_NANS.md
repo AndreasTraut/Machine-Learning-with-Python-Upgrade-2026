@@ -51,6 +51,9 @@ print(f"Dataset Shape: {movies_df.shape}")
 print(f"\nFehlende Revenue-Werte: {movies_df['Revenue'].isnull().sum()}")
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `import pandas as pd`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://pandas.pydata.org/docs/.
+
+
 ### 2. Daten separieren
 
 **Wichtiger Schritt:** Wir trennen die Daten in:
@@ -67,6 +70,9 @@ movies_without_revenue = movies_df[movies_df['Revenue'].isna()].copy()
 print(f"Filme mit Revenue: {len(movies_with_revenue)}")
 print(f"Filme ohne Revenue: {len(movies_without_revenue)}")
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Filme MIT Revenue (für Training)`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
 
 ### 3. Train-Test-Split
 
@@ -88,6 +94,9 @@ for train_idx, test_idx in split.split(movies_with_revenue, movies_with_revenue[
     strat_train_set = movies_with_revenue.iloc[train_idx]
     strat_test_set = movies_with_revenue.iloc[test_idx]
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import StratifiedShuffleSplit`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### 4. Pipeline erstellen
 
@@ -122,6 +131,9 @@ preprocessor = ColumnTransformer([
 ])
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.pipeline import Pipeline`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### 5. Modelle trainieren und vergleichen
 
 **DecisionTreeRegressor:**
@@ -142,6 +154,9 @@ print(f"DecisionTree RMSE (Train): ${train_rmse:.2f}M")
 print(f"DecisionTree RMSE (Test): ${test_rmse:.2f}M")
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.tree import DecisionTreeRegressor`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 **RandomForestRegressor:**
 ```python
 from sklearn.ensemble import RandomForestRegressor
@@ -161,6 +176,9 @@ test_rmse = np.sqrt(mean_squared_error(y_test, test_predictions))
 print(f"RandomForest RMSE (Test): ${test_rmse:.2f}M")
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.ensemble import RandomForestRegressor`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### 6. Cross-Validation
 
 ```python
@@ -176,6 +194,9 @@ scores = cross_val_score(
 rmse_scores = np.sqrt(-scores)
 print(f"Cross-Validation RMSE: ${rmse_scores.mean():.2f}M (+/- ${rmse_scores.std():.2f}M)")
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import cross_val_score`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### 7. Fehlende Revenue-Werte vorhersagen
 
@@ -196,6 +217,9 @@ print(movies_without_revenue[['Title', 'Year', 'Revenue_Predicted']]
       .sort_values('Revenue_Predicted', ascending=False)
       .head(10))
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Vorbereitung der Daten ohne Revenue`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
 
 ## 📈 Ergebnisse und Erkenntnisse
 

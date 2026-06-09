@@ -30,6 +30,9 @@ Ein typischer **Machine Learning Workflow** besteht aus 9 Hauptphasen:
 9. Modell-Deployment & Monitoring
 ```
 
+Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `1. Problem definieren`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/user_guide.html.
+
+
 ---
 
 ## 1️⃣ Problem definieren
@@ -54,6 +57,9 @@ Ein typischer **Machine Learning Workflow** besteht aus 9 Hauptphasen:
 # Ziel: RMSE < $30 für produktives System
 # Business-Impact: Bessere Preisempfehlungen für Hosts
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Problem: Regression (Preis vorhersagen)`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
 
 ---
 
@@ -113,6 +119,9 @@ data_path = Path('datasets/airbnb/listings.csv')
 df = load_data(data_path)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from pathlib import Path`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://pandas.pydata.org/docs/.
+
+
 ---
 
 ## 3️⃣ Explorative Datenanalyse (EDA)
@@ -134,6 +143,9 @@ missing = df.isnull().sum()
 print(f"\nFehlende Werte:\n{missing[missing > 0]}")
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Grundlegende Informationen`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 ### Visualisierungen erstellen
 
 **Verteilungen:**
@@ -153,6 +165,9 @@ df.boxplot(column='price', by='neighbourhood')
 plt.show()
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `import matplotlib.pyplot as plt`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://matplotlib.org/stable/users/index.html.
+
+
 **Korrelationen:**
 ```python
 # Korrelationsmatrix
@@ -165,6 +180,9 @@ plt.tight_layout()
 plt.show()
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Korrelationsmatrix`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 **Scatter Matrix:**
 ```python
 from pandas.plotting import scatter_matrix
@@ -173,6 +191,9 @@ features = ['price', 'reviews', 'availability', 'minimum_nights']
 scatter_matrix(df[features], figsize=(12, 10), alpha=0.6)
 plt.show()
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from pandas.plotting import scatter_matrix`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://pandas.pydata.org/docs/.
+
 
 ---
 
@@ -200,6 +221,9 @@ df_clean = df.dropna()  # Alle Zeilen mit NaN entfernen
 df_clean = df.dropna(axis=1, thresh=0.7 * len(df))  # Spalten mit >30% NaN
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.impute import SimpleImputer`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### Ausreißer behandeln
 
 ```python
@@ -218,6 +242,9 @@ df_no_outliers = df[(df['price'] >= lower_bound) & (df['price'] <= upper_bound)]
 df['price_clipped'] = df['price'].clip(lower=lower_bound, upper=upper_bound)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# IQR-Methode`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 ### Duplikate entfernen
 
 ```python
@@ -231,6 +258,9 @@ df_unique = df.drop_duplicates()
 # Basierend auf bestimmten Spalten
 df_unique = df.drop_duplicates(subset=['id'], keep='first')
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Duplikate identifizieren`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
 
 ---
 
@@ -252,6 +282,9 @@ scaler = MinMaxScaler()
 scaler = RobustScaler()
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### Encoding kategorischer Features
 
 **OneHotEncoding:**
@@ -267,6 +300,9 @@ encoded = encoder.fit_transform(df[['neighbourhood', 'room_type']])
 feature_names = encoder.get_feature_names_out()
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.preprocessing import OneHotEncoder`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 **Label Encoding (nur für ordinale Daten):**
 ```python
 from sklearn.preprocessing import LabelEncoder
@@ -274,6 +310,9 @@ from sklearn.preprocessing import LabelEncoder
 # Nur verwenden wenn Reihenfolge wichtig: low < medium < high
 df['size_encoded'] = LabelEncoder().fit_transform(df['size'])
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.preprocessing import LabelEncoder`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### Feature Creation
 
@@ -295,6 +334,9 @@ df['month'] = pd.to_datetime(df['date']).dt.month
 df['day_of_week'] = pd.to_datetime(df['date']).dt.dayofweek
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Neue Features aus bestehenden erstellen`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 ---
 
 ## 6️⃣ Train-Test-Split
@@ -314,6 +356,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import train_test_split`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### Stratified Split (empfohlen bei ungleichen Verteilungen)
 
 ```python
@@ -326,6 +371,9 @@ for train_idx, test_idx in split.split(X, y_categories):
     X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
     y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import StratifiedShuffleSplit`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### Pipeline für Preprocessing
 
@@ -358,6 +406,9 @@ X_train_prepared = preprocessor.fit_transform(X_train)
 X_test_prepared = preprocessor.transform(X_test)  # Nur transform!
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.pipeline import Pipeline`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ---
 
 ## 7️⃣ Modelltraining & -evaluation
@@ -381,6 +432,9 @@ models = {
 }
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.linear_model import LinearRegression, Ridge, Lasso`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### Modelle für Klassifikation
 
 ```python
@@ -399,6 +453,9 @@ models = {
     'NaiveBayes': GaussianNB()
 }
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.linear_model import LogisticRegression`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### Training & Evaluation Loop
 
@@ -433,6 +490,9 @@ for name, model in models.items():
     print()
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.metrics import mean_squared_error, r2_score, accuracy_score, f1_score`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### Cross-Validation
 
 ```python
@@ -448,6 +508,9 @@ scores = cross_val_score(
 rmse_scores = np.sqrt(-scores)
 print(f"CV RMSE: {rmse_scores.mean():.2f} (+/- {rmse_scores.std():.2f})")
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import cross_val_score`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ---
 
@@ -481,6 +544,9 @@ print(f"Best score: {np.sqrt(-grid_search.best_score_):.2f}")
 best_model = grid_search.best_estimator_
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import GridSearchCV`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### Randomized Search (schneller)
 
 ```python
@@ -507,6 +573,9 @@ random_search = RandomizedSearchCV(
 random_search.fit(X_train_prepared, y_train)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import RandomizedSearchCV`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ---
 
 ## 9️⃣ Modell-Deployment & Monitoring
@@ -526,6 +595,9 @@ joblib.dump(best_model, model_path)
 loaded_model = joblib.load(model_path)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `import joblib`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 ### Preprocessing-Pipeline speichern
 
 ```python
@@ -544,6 +616,9 @@ loaded_pipeline = joblib.load('models/full_pipeline.pkl')
 predictions = loaded_pipeline.predict(new_data)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Preprocessing + Model als eine Pipeline`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### Predictions auf neuen Daten
 
 ```python
@@ -558,6 +633,9 @@ new_data = pd.DataFrame({
 prediction = loaded_pipeline.predict(new_data)
 print(f"Vorhersage: {prediction[0]:.2f}")
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `# Neue Daten`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/modules/compose.html#pipeline.
+
 
 ---
 

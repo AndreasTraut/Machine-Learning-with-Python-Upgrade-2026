@@ -153,6 +153,9 @@ Alle Projekte folgen einem konsistenten, modernen Machine-Learning-Workflow:
    └── Reproduzierbarkeit (random_state, Versioning)
 ```
 
+Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `1. 📥 Data Ingestion`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/modules/compose.html#pipeline.
+
+
 > 📖 **Mehr Details:** [ML_WORKFLOW.md](./ML_WORKFLOW.md)
 
 ---

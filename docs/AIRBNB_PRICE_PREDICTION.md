@@ -59,6 +59,9 @@ main()
  └── save_model()              # Modell-Persistenz
 ```
 
+Dieser Block zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `main()`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/modules/compose.html#pipeline.
+
+
 ### Vorteile dieser Struktur:
 
 - 🔄 **Wiederverwendbar:** Funktionen können einzeln getestet werden
@@ -99,6 +102,9 @@ def load_data(dataset_path: Path = DATASET_PATH) -> pd.DataFrame:
     logger.info(f"Lade Daten aus {csv_path}")
     return pd.read_csv(csv_path)
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from pathlib import Path`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://pandas.pydata.org/docs/.
+
 
 **Wichtige Aspekte:**
 - ✅ Type Hints: `Path` und `pd.DataFrame`
@@ -144,6 +150,9 @@ def explore_data(df: pd.DataFrame) -> None:
     save_figure('scatter_matrix')
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `def explore_data(df: pd.DataFrame) -> None:`, mit der der zentrale Schritt direkt ausgeführt wird. Das verbessert die Nachvollziehbarkeit, weil der Ablauf klar definiert ist und sich Schritt für Schritt prüfen lässt. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
+
 ### 3. Stratified Sampling
 
 ```python
@@ -187,6 +196,9 @@ def split_stratified(df: pd.DataFrame,
     
     return train_set, test_set
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `def split_stratified(df: pd.DataFrame,`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 ### 4. Preprocessing Pipeline
 
@@ -234,6 +246,9 @@ def build_preprocessing_pipeline(
     
     return preprocessor
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `def build_preprocessing_pipeline(`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
 
 **Moderne API-Updates:**
 - ✅ `SimpleImputer` statt veralteter `Imputer`
@@ -299,6 +314,9 @@ def train_and_evaluate_models(
     return results
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `def train_and_evaluate_models(`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### 6. Hyperparameter-Optimierung
 
 **Grid Search:**
@@ -327,6 +345,9 @@ logger.info(f"Best Parameters: {grid_search.best_params_}")
 logger.info(f"Best RMSE: ${np.sqrt(-grid_search.best_score_):.2f}")
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import GridSearchCV`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 **Randomized Search (schneller):**
 ```python
 from sklearn.model_selection import RandomizedSearchCV
@@ -352,6 +373,9 @@ random_search = RandomizedSearchCV(
 random_search.fit(X_train, y_train)
 ```
 
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `from sklearn.model_selection import RandomizedSearchCV`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://scikit-learn.org/stable/.
+
+
 ### 7. Modell-Persistenz
 
 ```python
@@ -368,6 +392,9 @@ def save_model(model, filename: str = 'airbnb_price_model.pkl') -> None:
 # Modell laden
 loaded_model = joblib.load('models/airbnb_price_model.pkl')
 ```
+
+Der Python-Code zeigt einen konkreten Arbeitsschritt des beschriebenen Workflows. Im Fokus steht hier die Zeile `import joblib`, mit der der zentrale Schritt direkt ausgeführt wird. Damit wird die Datenvorbereitung, das Training oder die Auswertung reproduzierbar und für weitere Experimente leicht wiederverwendbar. Weitere Details stehen in der offiziellen Dokumentation: https://docs.python.org/3/tutorial/.
+
 
 ## 📈 Ergebnisse
 
